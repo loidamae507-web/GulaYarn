@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backyard Plants Guide</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("https://images.unsplash.com/photo-1461354464878-ad92f492a5a0") no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        /* Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 850px;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #a8ff60;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: left;
+            border-left: 5px solid #a8ff60;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h2 {
+            color: #a8ff60;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #f1f1f1;
+            line-height: 1.5;
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <h1 class="title">Backyard Plants Guide</h1>
+
+        <p class="intro">
+            Explore common edible plants found in Filipino backyards. Learn how to identify them and understand their nutritional value.
+        </p>
+
+        <div class="card">
+            <h2>🌱 Malunggay</h2>
+            <p>Rich in vitamins A, C, and calcium. Helps boost immunity and improve nutrition.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Kangkong</h2>
+            <p>A leafy vegetable rich in iron and fiber. Good for digestion and overall health.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Alugbati</h2>
+            <p>Contains vitamins and antioxidants that help maintain healthy skin and body functions.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Talbos ng Kamote (Sweet Potato Leaves)</h2>
+            <p>A nutritious leafy vegetable rich in antioxidants, fiber, and vitamins. Helps improve digestion and supports heart health.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Ampalaya (Bitter Gourd)</h2>
+            <p>Known for helping regulate blood sugar levels. It is rich in vitamins and is commonly used in Filipino dishes.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Sitaw (String Beans)</h2>
+            <p>A good source of fiber and vitamins that support digestion and overall body function. Easy to grow in warm climates.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Pechay (Bok Choy)</h2>
+            <p>Rich in calcium, iron, and vitamins A and C. Helps strengthen bones and boost immunity.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Okra</h2>
+            <p>Contains fiber and antioxidants that support digestion and heart health. It grows well in tropical environments.</p>
+        </div>
+
+        <p class="closing">
+            These plants are easy to grow, affordable, and packed with nutrients—perfect for everyday meals.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

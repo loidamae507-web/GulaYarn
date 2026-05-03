@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GULAYarn</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        /* Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #8eff7a;
+        }
+
+        .tagline {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #dcdcdc;
+            font-style: italic;
+        }
+
+        .intro {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #f1f1f1;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 5px solid #8eff7a;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h2 {
+            color: #8eff7a;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            color: #f1f1f1;
+            line-height: 1.7;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: #f1f1f1;
+            line-height: 1.7;
+        }
+
+        .highlight li {
+            list-style: none;
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <h1 class="title">GULAYarn</h1>
+        <p class="tagline">Grow Local, Eat Healthy.</p>
+
+        <p class="intro">
+            GULAYarn is a platform dedicated to helping Filipinos rediscover the value of backyard gardening and local vegetables. 
+            Many nutritious plants grow easily in our surroundings, yet they are often overlooked. Through simple guides, easy recipes, 
+            and practical gardening tips, GULAYarn encourages families to grow their own food, eat healthier meals, and live more sustainably.
+            <br><br>
+            Whether you are a beginner or someone with experience in gardening, this website provides accessible information to help you 
+            start your journey toward healthier living—right from your own backyard.
+        </p>
+
+        <!-- Highlight Section -->
+        <div class="card">
+            <h2>🌿 What You Can Explore</h2>
+            <ul class="highlight">
+                <li>🌿 Discover edible backyard plants commonly found in the Philippines</li>
+                <li>🥗 Learn their health benefits and nutritional value</li>
+                <li>🍲 Cook affordable and easy home recipes</li>
+                <li>🌱 Grow your own food with simple gardening techniques</li>
+            </ul>
+        </div>
+
+        <!-- Featured Plant -->
+        <div class="card">
+            <h2>🌱 Featured Plant: Malunggay (Moringa)</h2>
+            <p>
+                Known as a “miracle tree,” malunggay is packed with essential nutrients such as vitamins A, C, and E, calcium, and antioxidants. 
+                It helps strengthen the immune system, improve digestion, and support overall wellness. It is also easy to grow, making it 
+                perfect for home gardens.
+            </p>
+        </div>
+
+        <p class="closing">
+            Start small, grow your own food, and take a step toward a healthier lifestyle today.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

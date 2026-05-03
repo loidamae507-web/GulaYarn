@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gardening Tips</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735") no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        /* Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #7CFF6B;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+            color: #e6e6e6;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 5px solid #7CFF6B;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h2 {
+            color: #7CFF6B;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        p {
+            color: #f1f1f1;
+            line-height: 1.7;
+            margin-top: 5px;
+        }
+
+        .divider {
+            margin: 15px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .plant-name {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <h1 class="title">Gardening Tips</h1>
+
+        <p class="intro">
+            Growing your own plants is a rewarding and sustainable practice. It not only provides fresh food but also helps reduce expenses and promotes a healthier lifestyle. 
+            Here are some simple tips to help you start your backyard garden.
+        </p>
+
+        <!-- Basic Tips -->
+        <div class="card">
+            <h2>🌱 Basic Tips</h2>
+            <ul>
+                <li>Water your plants regularly, especially during dry days</li>
+                <li>Ensure your plants receive enough sunlight (at least 4–6 hours daily)</li>
+                <li>Use healthy, nutrient-rich soil</li>
+                <li>Remove weeds to prevent competition for nutrients</li>
+                <li>Use natural fertilizers like compost when possible</li>
+            </ul>
+        </div>
+
+        <!-- Plant Examples -->
+        <div class="card">
+            <h2>🌿 Plant Examples</h2>
+
+            <p><span class="plant-name">Kangkong:</span> Thrives in moist soil and requires frequent watering. It grows quickly and can be harvested multiple times.</p>
+
+            <div class="divider"></div>
+
+            <p><span class="plant-name">Malunggay:</span> A low-maintenance plant that can grow even in dry conditions. It requires minimal care and can survive in poor soil.</p>
+        </div>
+
+        <!-- Additional Advice -->
+        <div class="card">
+            <h2>🌼 Additional Advice</h2>
+            <p>
+                Start with a few plants and gradually expand your garden. Reuse containers like plastic bottles or pots if you have limited space. 
+                Gardening is not about perfection—it’s about consistency and care.
+            </p>
+        </div>
+
+        <p class="closing">
+            With patience and care, your backyard can become a source of fresh and healthy food.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

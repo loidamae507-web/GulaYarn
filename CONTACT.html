@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - GULAYarn</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        /* Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #6ee7ff;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        /* Contact card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+            border-left: 5px solid #6ee7ff;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h2 {
+            color: #6ee7ff;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .info {
+            color: #f1f1f1;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        .info span {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <h1 class="title">Contact Us</h1>
+
+        <p class="intro">
+            Have questions, suggestions, or want to share your backyard plants? Reach out to us!
+        </p>
+
+        <div class="card">
+            <h2>📩 Contact Info</h2>
+
+            <div class="info">
+                <p>📧 <span>Email:</span> gulayarn@email.com</p>
+                <p>📍 <span>Location:</span> Philippines</p>
+                <p>📱 <span>Facebook:</span> GULAYarn PH</p>
+            </div>
+        </div>
+
+        <p class="closing">
+            We’d love to hear from you and grow a healthier community together 🌱
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

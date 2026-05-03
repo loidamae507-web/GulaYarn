@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Backyard Recipes</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: url("https://images.unsplash.com/photo-1505575972945-280f0a4f1a66") no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        /* Overlay */
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            text-align: center;
+            color: white;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #ffcc70;
+        }
+
+        .intro {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        /* Recipe Card */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 5px solid #ffcc70;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h2 {
+            color: #ffcc70;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        ul {
+            margin-left: 20px;
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #f1f1f1;
+            line-height: 1.6;
+            margin-top: 5px;
+        }
+
+        .divider {
+            margin: 15px 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #dcdcdc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="container">
+
+        <h1 class="title">Simple Backyard Recipes</h1>
+
+        <p class="intro">
+            Turn your backyard plants into delicious and healthy meals with these easy recipes.
+        </p>
+
+        <!-- Malunggay Soup -->
+        <div class="card">
+            <h2>🥘 Malunggay Soup</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Malunggay leaves</li>
+                <li>Garlic</li>
+                <li>Onion</li>
+                <li>Broth</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Sauté garlic and onion, add broth, then mix in malunggay leaves. Simmer and serve.</p>
+        </div>
+
+        <!-- Kangkong Salad -->
+        <div class="card">
+            <h2>🥗 Kangkong Salad</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Kangkong</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+                <li>Vinegar</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Boil kangkong, mix with vegetables, and add vinegar dressing.</p>
+        </div>
+
+        <!-- Ginisang Ampalaya -->
+        <div class="card">
+            <h2>🍳 Ginisang Ampalaya</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Ampalaya</li>
+                <li>Egg</li>
+                <li>Garlic</li>
+                <li>Onion</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Sauté garlic and onion, add sliced ampalaya, then mix in beaten egg. Cook until done.</p>
+        </div>
+
+        <!-- Tinolang Manok -->
+        <div class="card">
+            <h2>🍲 Tinolang Manok with Malunggay</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Chicken</li>
+                <li>Malunggay leaves</li>
+                <li>Ginger</li>
+                <li>Garlic</li>
+                <li>Onion</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Boil chicken with ginger, garlic, and onion. Add malunggay leaves before serving.</p>
+        </div>
+
+        <!-- Adobong Sitaw -->
+        <div class="card">
+            <h2>🥬 Adobong Sitaw</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Sitaw</li>
+                <li>Soy sauce</li>
+                <li>Vinegar</li>
+                <li>Garlic</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Cook sitaw with garlic, soy sauce, and vinegar until tender.</p>
+        </div>
+
+        <!-- Ginisang Pechay -->
+        <div class="card">
+            <h2>🍛 Ginisang Pechay</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Pechay</li>
+                <li>Garlic</li>
+                <li>Onion</li>
+                <li>Oyster sauce (optional)</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Sauté garlic and onion, add pechay, then season and cook briefly.</p>
+        </div>
+
+        <!-- Sinigang na Okra -->
+        <div class="card">
+            <h2>🍲 Sinigang na Okra</h2>
+
+            <div class="section-title">Ingredients:</div>
+            <ul>
+                <li>Okra</li>
+                <li>Tamarind mix</li>
+                <li>Tomato</li>
+                <li>Onion</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="section-title">Procedure:</div>
+            <p>Boil water with tomato and onion, add tamarind mix, then add okra and simmer.</p>
+        </div>
+
+        <p class="closing">
+            Healthy meals can start right from your backyard—simple, affordable, and nutritious.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
