@@ -5,7 +5,7 @@
 }
 
 .main{
-    width: 120%;
+    width: 100%;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0,0,0,0.5)50%), url(1.jpg) ;
     background-position: center;
     background-size: cover;
@@ -267,4 +267,11 @@ ul li a:hover{
 
 .icons ion-icon:hover{
     color: olivedrab;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* This stops the side-to-side scrolling */
+  margin: 0;
+  padding: 0;
 }
