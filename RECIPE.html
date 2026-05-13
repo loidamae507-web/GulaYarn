@@ -105,6 +105,25 @@
             font-style: italic;
             color: #dcdcdc;
         }
+
+        /* Video Styling */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
 </head>
 
@@ -139,7 +158,7 @@
         </div>
 
         <!-- Kangkong Salad -->
-        <div class="card">
+       <div class="card">
             <h2>🥗 Kangkong Salad</h2>
 
             <div class="section-title">Ingredients:</div>
@@ -154,6 +173,10 @@
 
             <div class="section-title">Procedure:</div>
             <p>Boil kangkong, mix with vegetables, and add vinegar dressing.</p>
+            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/4MZEAxCbzgk" allowfullscreen></iframe>
+            </div>
         </div>
 
         <!-- Ginisang Ampalaya -->
