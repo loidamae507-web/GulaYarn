@@ -1,0 +1,27 @@
+/* Navigation Bar Styling */
+.nav-container {
+    background: rgba(0, 0, 0, 0.8); /* Dark background so it's readable over images */
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Keeps it at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #a8ff60;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #a8ff60; /* That signature GulaYarn green */
+    font-weight: 600;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.nav-links:hover {
+    border: 1px solid #a8ff60;
+    border-radius: 5px;
+    background: rgba(168, 255, 96, 0.1);
+}
