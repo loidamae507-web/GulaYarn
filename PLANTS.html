@@ -5,6 +5,8 @@
     <title>Backyard Plants Guide</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 
     <style>
         * {
@@ -17,6 +19,35 @@
         body {
             background: url("https://images.unsplash.com/photo-1461354464878-ad92f492a5a0") no-repeat center center/cover;
             min-height: 100vh;
+        }
+
+        /* Navigation Bar Styling */
+        .nav-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #a8ff60;
+        }
+
+        .nav-links {
+            text-decoration: none;
+            color: #a8ff60;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+            transition: 0.3s;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .nav-links:hover {
+            border: 1px solid #a8ff60;
+            border-radius: 5px;
+            background: rgba(168, 255, 96, 0.1);
         }
 
         .overlay {
@@ -57,7 +88,7 @@
             text-align: left;
             border-left: 5px solid #a8ff60;
             transition: 0.3s ease;
-            display: flex; /* Added to align text and image */
+            display: flex; 
             align-items: center;
             gap: 20px;
         }
@@ -83,15 +114,14 @@
         }
 
         .plant-img {
-            width: 120px;         /* Fixed width */
-            height: 120px;        /* Fixed height */
-            min-width: 120px;     /* Prevents the image from shrinking if text is long */
-            border-radius: 12px;  /* Slightly smoother corners */
-            object-fit: cover;    /* Ensures image fills the box without stretching */
-            object-position: center; /* Centers the "crop" on the middle of the plant */
+            width: 120px;
+            height: 120px;
+            min-width: 120px;
+            border-radius: 12px;
+            object-fit: cover;
+            object-position: center;
             border: 2px solid #a8ff60;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a little depth */
-
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .closing {
@@ -101,7 +131,6 @@
             color: #dcdcdc;
         }
 
-        /* Responsive adjustment for mobile */
         @media (max-width: 600px) {
             .card {
                 flex-direction: column;
@@ -116,6 +145,15 @@
 </head>
 
 <body>
+
+<div class="nav-container">
+    <a href="index.html" class="nav-links">HOME</a>
+    <a href="ABOUT.html" class="nav-links">ABOUT</a>
+    <a href="PLANTS.html" class="nav-links">PLANTS</a>
+    <a href="GARDENING.html" class="nav-links">GARDENING</a>
+    <a href="RECIPE.html" class="nav-links">RECIPE</a>
+    <a href="CONTACT.html" class="nav-links">CONTACT</a>
+</div>
 
 <div class="overlay">
     <div class="container">
