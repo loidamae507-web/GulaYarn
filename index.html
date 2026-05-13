@@ -2,130 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GULAYarn | Grow Local, Eat Healthy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --forest-green: #0a1a14;
-            --leaf-green: #2d5a43;
-            --accent-gold: #d4af37;
-            --text-white: #f5f5f5;
-        }
+    <title>Backyard Plants Guide</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
         body {
-            background-color: var(--forest-green);
-            color: var(--text-white);
-            line-height: 1.6;
+            background: url("https://images.unsplash.com/photo-1461354464878-ad92f492a5a0") no-repeat center center/cover;
+            min-height: 100vh;
         }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(10, 26, 20, 0.7), rgba(10, 26, 20, 0.7)), 
-                        url('https://registrationwala.wordpress.com/wp-content/uploads/2025/03/2151252092.jpg?w=816');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
+        /* Navigation Bar Styling */
+        .nav-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #0A2B0C;
+        }
+
+        .nav-links {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+            transition: 0.3s;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .nav-links:hover {
+            border: 1px solid #a8ff60;
+            border-radius: 5px;
+            background: rgba(168, 255, 96, 0.1);
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 20px;
+            padding: 40px;
         }
 
-        .hero h1 { font-size: 4rem; color: var(--text-white); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: var(--accent-gold); font-style: italic; max-width: 600px; }
+        .container {
+            max-width: 850px;
+            text-align: center;
+            color: white;
+        }
 
-        /* Navigation */
-     /* Updated Navigation to match other pages */
-.nav-container {
-    background: rgba(0, 0, 0, 0.8); /* Matches other navs */
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #092A0D; /* Leaf green border */
-}
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #f1f1f1;
+        }
 
-.nav-links {
-    text-decoration: none;
-    color: #f1f1f1;
-    font-weight: 600;
-    margin: 0 15px;
-    padding: 8px 15px;
-    border: 1px solid transparent;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.nav-links:hover {
-    border: 1px solid #a8ff60; /* Signature Green Border */
-    border-radius: 5px;
-    color: #a8ff60;
-    background: rgba(168, 255, 96, 0.1);
-}
-
-        /* Content Sections */
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        .intro {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #f1f1f1;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover { transform: translateY(-10px); border-color: var(--accent-gold); }
-
-        .card h2 { color: var(--accent-gold); margin-bottom: 15px; }
-
-        /* Video Styling */
-        .video-section {
-            margin-top: 60px;
-            text-align: center;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
-            margin: 20px auto;
             border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 5px solid #f1f1f1;
+            transition: 0.3s ease;
+            display: flex; 
+            align-items: center;
+            gap: 20px;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%; border: none;
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
         }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            border-top: 1px solid var(--leaf-green);
+        .card-content {
+            flex: 1;
+        }
+
+        .card h2 {
+            color: #f1f1f1;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #f1f1f1;
+            line-height: 1.5;
+        }
+
+        .plant-img {
+            width: 120px;
+            height: 120px;
+            min-width: 120px;
+            border-radius: 12px;
+            object-fit: cover;
+            object-position: center;
+            border: 2px solid #f1f1f1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .closing {
+            margin-top: 30px;
+            font-size: 16px;
+            font-style: italic;
+            color: #f1f1f1;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .plant-img {
+                width: 100%;
+                height: 200px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-  <div class="nav-container">
+<div class="nav-container">
     <a href="index.html" class="nav-links">HOME</a>
     <a href="ABOUT.html" class="nav-links">ABOUT</a>
     <a href="PLANTS.html" class="nav-links">PLANTS</a>
@@ -134,49 +155,106 @@
     <a href="CONTACT.html" class="nav-links">CONTACT</a>
 </div>
 
-    <header class="hero">
-        <h1>GULAYarn</h1>
-        <p>Connecting Filipinos with the power of backyard gardening—one leaf at a time.</p>
-    </header>
-
+<div class="overlay">
     <div class="container">
-        <section>
-            <h2 style="text-align: center; font-size: 2.5rem;">Explore Your Backyard</h2>
-            <div class="grid">
-    <a href="PLANTS.html" style="text-decoration: none; color: inherit;">
-        <div class="card">
-            <h2>🥗 Food Guide and Nutrition</h2>
-            <p>Identify safe and nutritious edible plants commonly found in Philippine yards such as Malunggay and Kangkong, which are rich sources of essential vitamins and minerals that help support overall health.</p>
-        </div>
-    </a>
+        <h1 class="title">Backyard Plants Guide</h1>
+        <p class="intro">
+            Explore common edible plants found in Filipino backyards. Learn how to identify them and understand their nutritional value.
+        </p>
 
-    <a href="GARDENING.html" style="text-decoration: none; color: inherit;">
         <div class="card">
-            <h2>🌱 Gardening Tips</h2>
-            <p>Growing your own plants is a rewarding and sustainable practice. It provides access to fresh and healthy food while reducing household expenses and encouraging a healthier lifestyle.</p>
-        </div>
-    </a>
-
-    <a href="RECIPE.html" style="text-decoration: none; color: inherit;">
-        <div class="card">
-            <h2>👩‍🍳 Recipes</h2>
-            <p>Simple, affordable, and healthy recipes designed for the Filipino family, using readily available ingredients commonly found in local markets and backyard gardens</p>
-        </div>
-    </a>
-</div>
-        </section>
-
-        <section class="video-section">
-            <h2 style="color: var(--accent-gold);">Daily Feature: Garlic Kangkong Tutorial</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/4MZEAxCbzgk" allowfullscreen></iframe>
+            <div class="card-content">
+                <h2>Malunggay (Moringa)</h2>
+                <p>Rich in vitamins A, C, and calcium. Helps boost immunity and improve nutrition.</p>
             </div>
-        </section>
-    </div>
+            <img src="https://assets.unileversolutions.com/v1/88348707.jpg" alt="Malunggay" class="plant-img">
+        </div>
 
-    <footer>
-        &copy; 2026 GULAYarn. Grow Local, Eat Healthy.
-    </footer>
+        <div class="card">
+            <div class="card-content">
+                <h2>Kangkong (Spinach)</h2>
+                <p>A leafy vegetable rich in iron and fiber. Good for digestion and overall health.</p>
+            </div>
+            <img src="https://panlasangpinoy.com/wp-content/uploads/2021/03/what-is-kangkong.jpg" alt="Kangkong" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Alugbati (Malabar Spinach)</h2>
+                <p>Contains vitamins and antioxidants that help maintain healthy skin and body functions.</p>
+            </div>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8RlcebJ_OFN5rukGEgU2TBx8zd92VtlRAEWa3BTXjNYCIQ8J1KmEo_trpLH81cFk1mOi6UmXZbUui_pRaz3anHI9WHIWrpJ6e_K_yWPln3OiTouk0BJRjazQkFUL49lTNp8ynNcJ8AR1C/w640-h360/1.+Juan+magsasaka+alugbati+guide.jpg" alt="Alugbati" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Talbos ng Kamote (Sweet Potato Leaves) </h2>
+                <p>A nutritious leafy vegetable rich in antioxidants, fiber, and vitamins. Helps improve digestion and supports heart health.</p>
+            </div>
+            <img src="https://goodfinds.ph/wp-content/uploads/2022/08/A_VF-70.jpg" alt="Sweet Potato Leaves" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Saluyot (Jute)</h2>
+                <p>Known for its slightly sticky texture when cooked. Rich in iron, calcium, and vitamins that help support healthy blood and bones.</p>
+            </div>
+            <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/11/saluyot-jute-leaves-1296x728-header.jpg?w=1155&h=1528" alt="Saluyot" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Kulitis (Amaranth)</h2>
+                <p>A fast-growing vegetable rich in iron, calcium, and vitamins. A nutritious addition to soups and sautéed dishes.</p>
+            </div>
+            <img src="https://iveg.pcaarrd.dost.gov.ph/img/Crops/CropsPerProvince/038-DSCF7572-17.jpg" alt="Kulitis" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Labong (Bamboo Shoots)</h2>
+                <p>Rich in fiber and antioxidants, labong supports digestion and adds a crunchy texture to meals.</p>
+            </div>
+            <img src="https://cdn.mos.cms.futurecdn.net/oKpX5tDbb6cDe98nsaunzj-1379-80.jpg" alt="Labong" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Ampalaya (Bitter Gourd)</h2>
+                <p>Known for helping regulate blood sugar levels. Rich in vitamins and commonly used in Filipino dishes.</p>
+            </div>
+            <img src="https://kitchenarchives.com/wp-content/uploads/2017/06/2-Bitter-Gourds.jpg" alt="Ampalaya" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Sitaw (String Beans)</h2>
+                <p>A good source of fiber and vitamins that support digestion and overall body function.</p>
+            </div>
+            <img src="https://palengkego.shop/cdn/shop/products/sitaw_4500x.jpg?v=1587279952" alt="Sitaw" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Gabi (Taro)</h2>
+                <p>A versatile plant whose leaves and stalks are edible. Rich in fiber, potassium, and vitamins.</p>
+            </div>
+            <img src="https://everydayamore.wordpress.com/wp-content/uploads/2018/04/12313-1.png?w=750" alt="Gabi" class="plant-img">
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h2>Okra</h2>
+                <p>Contains fiber and antioxidants that support digestion and heart health. Grows well in tropical environments.</p>
+            </div>
+            <img src="https://www.cookedandloved.com/wp-content/uploads/2020/02/what-is-okra-s.jpg" alt="Okra" class="plant-img">
+        </div>
+
+        <p class="closing">
+            These plants are easy to find, grow, affordable, and packed with nutrients—perfect for everyday meals.
+        </p>
+    </div>
+</div>
 
 </body>
 </html>
