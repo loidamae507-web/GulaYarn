@@ -7,6 +7,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
         * {
             margin: 0;
@@ -104,11 +106,48 @@
             font-style: italic;
             color: #dcdcdc;
         }
+        /* Container for the side-by-side plant cards */
+.plant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Specific styling for the small plant cards */
+.plant-card {
+    margin: 0; /* Overrides the default margin to fit the grid perfectly */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plant-card h3 {
+    color: #a8ff60;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Mobile Responsiveness: Stack cards on small screens */
+@media (max-width: 600px) {
+    .plant-grid {
+        grid-template-columns: 1fr;
+    }
     </style>
 </head>
 
 <body>
 
+<div class="nav-container">
+    <a href="index.html" class="nav-links">HOME</a>
+    <a href="ABOUT.html" class="nav-links">ABOUT</a>
+    <a href="PLANTS.html" class="nav-links">PLANTS</a>
+    <a href="GARDENING.html" class="nav-links">GARDENING</a>
+    <a href="RECIPE.html" class="nav-links">RECIPE</a>
+    <a href="CONTACT.html" class="nav-links">CONTACT</a>
+</div>
+    
 <div class="overlay">
 
     <div class="container">
@@ -121,27 +160,30 @@
         </p>
 
         <!-- Basic Tips -->
-        <div class="card">
-            <h2>🌱 Basic Tips</h2>
-            <ul>
-                <li>Water your plants regularly, especially during dry days</li>
-                <li>Ensure your plants receive enough sunlight (at least 4–6 hours daily)</li>
-                <li>Use healthy, nutrient-rich soil</li>
-                <li>Remove weeds to prevent competition for nutrients</li>
-                <li>Use natural fertilizers like compost when possible</li>
-            </ul>
-        </div>
+<div class="card">
+    <h2>🌱 Basic Tips</h2>
+    <ul>
+        <li>Water your plants regularly, especially during dry days</li>
+        <li>Ensure your plants receive enough sunlight (at least 4–6 hours daily)</li>
+        <li>Use healthy, nutrient-rich soil</li>
+        <li>Remove weeds to prevent competition for nutrients</li>
+        <li>Use natural fertilizers like compost when possible</li>
+    </ul>
+</div>
 
-        <!-- Plant Examples -->
-        <div class="card">
-            <h2>🌿 Plant Examples</h2>
+<h2 style="color: #a8ff60; margin: 40px 0 20px; text-align: center;">🌿 Plant Examples</h2>
 
-            <p><span class="plant-name">Kangkong:</span> Thrives in moist soil and requires frequent watering. It grows quickly and can be harvested multiple times.</p>
+<div class="plant-grid">
+    <div class="card plant-card">
+        <h3>Kangkong</h3>
+        <p>Thrives in moist soil and requires frequent watering. It grows quickly and can be harvested multiple times.</p>
+    </div>
 
-            <div class="divider"></div>
-
-            <p><span class="plant-name">Malunggay:</span> A low-maintenance plant that can grow even in dry conditions. It requires minimal care and can survive in poor soil.</p>
-        </div>
+    <div class="card plant-card">
+        <h3>Malunggay</h3>
+        <p>A low-maintenance plant that can grow even in dry conditions. It requires minimal care and can survive in poor soil.</p>
+    </div>
+</div>
 
         <!-- Additional Advice -->
         <div class="card">
