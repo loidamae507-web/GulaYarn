@@ -6,12 +6,12 @@
     position: sticky; /* Keeps it at the top when scrolling */
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #a8ff60;
+    border-bottom: 1px solid #092A0D;
 }
 
 .nav-links {
     text-decoration: none;
-    color: #a8ff60; /* That signature GulaYarn green */
+    color: #f1f1f1; /* That signature GulaYarn green */
     font-weight: 600;
     margin: 0 15px;
     padding: 8px 15px;
@@ -21,7 +21,7 @@
 }
 
 .nav-links:hover {
-    border: 1px solid #a8ff60;
+    border: 1px solid #f1f1f1;
     border-radius: 5px;
     background: rgba(168, 255, 96, 0.1);
 }
