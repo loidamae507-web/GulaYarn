@@ -174,9 +174,99 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
     </style>
-</head>
-
 <body>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        /* Your chosen landscape background */
+        background: url("https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2000&auto=format&fit=crop") no-repeat center center/cover;
+        background-attachment: fixed;
+        min-height: 100vh;
+    }
+
+    .overlay {
+        background: rgba(0, 0, 0, 0.7);
+        min-height: 100vh;
+        width: 100%;
+        padding: 40px 20px; /* Changed from 'flex' to standard padding */
+    }
+
+    .container {
+        max-width: 1200px; /* Wider container for the grid */
+        margin: 0 auto;
+        color: white;
+    }
+
+    .title {
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #a8ff60; /* Using your signature GULAYarn green */
+    }
+
+    .intro {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 40px;
+        color: #dcdcdc;
+    }
+
+    /* THE GRID FIX */
+    .recipe-grid {
+        display: grid;
+        /* This creates 2 columns on desktop, 1 on mobile */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+        gap: 25px;
+    }
+
+    .recipe-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding: 25px;
+        border-left: 5px solid #a8ff60;
+        transition: 0.3s ease;
+    }
+
+    .recipe-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .recipe-img {
+        display: block;
+        margin: 0 auto 15px;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #a8ff60;
+    }
+
+    .recipe-card h2 { color: #a8ff60; margin-bottom: 10px; }
+    .recipe-card h3 { color: #ffffff; margin: 15px 0 5px; font-size: 1rem; text-transform: uppercase; }
+    
+    .recipe-card ul, .recipe-card ol {
+        margin-left: 20px;
+        text-align: left; /* Essential for nursing guides: keeps text neat */
+    }
+
+    /* Centered Footer */
+    .closing-footer {
+        text-align: center;
+        margin-top: 50px;
+        font-style: italic;
+        color: #dcdcdc;
+    }
+</style>
 <div class="nav-container">
     <a href="index.html" class="nav-links">HOME</a>
     <a href="ABOUT.html" class="nav-links">ABOUT</a>
@@ -197,236 +287,215 @@
 
     
 
-<div class="recipe-grid">
-    <div class="recipe-card">
-        <h2>🌱 Tinolang Manok with Malunggay</h2>
-        <img src="https://images.openai.com/static-rsc-4/eu5cBOHJCHl-Tx3nsNHmLX4YGdexWGvUAX0PW-lOdUFZbfqKt1kaSc5C1IMOVsuKgtp0-AP8fNjFOrL1xRcVbcwkiTIptA8tHSaqUZ4IaXkhuK30q2Ld2dq7XmSrw7ejW4QMpPJ20y98QhN9F1hFIzFO3Yi9hU41v4Lz2C2l_jg?purpose=inline" alt="Tinolang Manok" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Chicken, Malunggay leaves</li>
-            <li>Green papaya or sayote</li>
-            <li>Garlic, onion, ginger</li>
-            <li>Fish sauce, Water</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Sauté garlic, onion, and ginger.</li>
-            <li>Add chicken and cook until lightly browned.</li>
-            <li>Add fish sauce and water; simmer until chicken is tender.</li>
-            <li>Add papaya or sayote.</li>
-            <li>Add malunggay leaves last and cook for 1 minute.</li>
-        </ol>
-    </div>
+<div class="overlay">
+    <div class="container">
+        <h1 class="title">Filipino Vegetable Recipes</h1>
+        <p class="intro">Turn your backyard plants into delicious and healthy meals with these easy recipes.</p>
 
-    <div class="recipe-card">
-        <h2>🌿 Adobong Kangkong</h2>
-        <img src="https://images.openai.com/static-rsc-4/SvoqNrud0s7VYFs64gV7RzuyZRYjpmXO2qvlUZCPR3ReiQBsBdPymS7969F-GQmOnbfo9FZRhuSpdr45zdPYrApYm2pXTIKWprxjDL0BHKGmUxWznifDdHypFE1RAXSwcPkRQqPJGZvzJ-v7iRhK2CRKkqCVGO4fwNTzjgfESa0?purpose=inline" alt="Adobong Kangkong" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Kangkong, Garlic and onion</li>
-            <li>Soy sauce, Vinegar</li>
-            <li>Oyster sauce (optional)</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Wash and cut kangkong.</li>
-            <li>Sauté garlic and onion.</li>
-            <li>Add soy sauce and a little water.</li>
-            <li>Add kangkong stems first, then leaves.</li>
-            <li>Pour vinegar and let simmer without stirring.</li>
-        </ol>
-    </div>
+        <div class="recipe-grid">
 
-   <div class="recipe-card">
-        <h2>🍃 Laswa with Alugbati</h2>
-        
-        <img src="https://4.bp.blogspot.com/-FTvIkCsAVkc/TsScVJWZmQI/AAAAAAAALW4/s05AvJlsuYo/s1600/DSC00478.JPG" alt="Laswa with Alugbati" class="recipe-img">
+            <!-- Tinolang Manok -->
+            <div class="recipe-card">
+                <h2>🌱 Tinolang Manok with Malunggay</h2>
+                <img src="https://images.openai.com/static-rsc-4/eu5cBOHJCHl-Tx3nsNHmLX4YGdexWGvUAX0PW-lOdUFZbfqKt1kaSc5C1IMOVsuKgtp0-AP8fNjFOrL1xRcVbcwkiTIptA8tHSaqUZ4IaXkhuK30q2Ld2dq7XmSrw7ejW4QMpPJ20y98QhN9F1hFIzFO3Yi9hU41v4Lz2C2l_jg?purpose=inline" alt="Tinolang Manok" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Chicken, Malunggay leaves, Green papaya or sayote, Garlic, onion, ginger, Fish sauce, Water</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Sauté garlic, onion, and ginger.</li>
+                    <li>Add chicken and cook until lightly browned.</li>
+                    <li>Add fish sauce and water; simmer until chicken is tender.</li>
+                    <li>Add papaya or sayote.</li>
+                    <li>Add malunggay leaves last and cook for 1 minute.</li>
+                </ol>
+            </div>
 
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Alugbati leaves</li>
-            <li>Squash (Kalabasa) and Sitaw</li>
-            <li>Okra and Eggplant</li>
-            <li>Shrimp or sliced fried fish</li>
-            <li>Salt or Bagoong to taste</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Boil water with onions and tomatoes.</li>
-            <li>Add the squash and cook until slightly tender.</li>
-            <li>Add the sitaw, okra, and eggplant.</li>
-            <li>Add the shrimp or fish and season with salt.</li>
-            <li>Add the alugbati leaves last and simmer for 1-2 minutes.</li>
-        </ol>
-    </div>
+            <!-- Adobong Kangkong -->
+            <div class="recipe-card">
+                <h2>🌿 Adobong Kangkong</h2>
+                <img src="https://images.openai.com/static-rsc-4/SvoqNrud0s7VYFs64gV7RzuyZRYjpmXO2qvlUZCPR3ReiQBsBdPymS7969F-GQmOnbfo9FZRhuSpdr45zdPYrApYm2pXTIKWprxjDL0BHKGmUxWznifDdHypFE1RAXSwcPkRQqPJGZvzJ-v7iRhK2CRKkqCVGO4fwNTzjgfESa0?purpose=inline" alt="Adobong Kangkong" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Kangkong, Garlic and onion, Soy sauce, Vinegar, Oyster sauce (optional)</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Wash and cut kangkong.</li>
+                    <li>Sauté garlic and onion.</li>
+                    <li>Add soy sauce and a little water.</li>
+                    <li>Add kangkong stems first, then leaves.</li>
+                    <li>Pour vinegar and let simmer without stirring.</li>
+                </ol>
+            </div>
 
-    <div class="recipe-card">
-        <h2>🥗 Laswa with Talbos ng Kamote</h2>
+            <!-- Laswa with Alugbati -->
+            <div class="recipe-card">
+                <h2>🍃 Laswa with Alugbati</h2>
+                <img src="https://4.bp.blogspot.com/-FTvIkCsAVkc/TsScVJWZmQI/AAAAAAAALW4/s05AvJlsuYo/s1600/DSC00478.JPG" alt="Laswa with Alugbati" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Alugbati, Squash, Sitaw, Okra, Eggplant, Shrimp/Fish, Salt/Bagoong</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Boil water with onions and tomatoes.</li>
+                    <li>Add the squash and cook until slightly tender.</li>
+                    <li>Add the sitaw, okra, and eggplant.</li>
+                    <li>Add the shrimp or fish and season with salt.</li>
+                    <li>Add the alugbati leaves last and simmer for 1-2 minutes.</li>
+                </ol>
+            </div>
 
-        <img src="https://images.openai.com/static-rsc-4/8xDaHzbzRnDD2dj8nWihCNrWo8pxmG3pshlY1SFo866s3UxT9PHzk752JPiZD4s5vuTgKqhaWZKuoa_cMkWdtRK2tUY3xne0I-4gHWA3R4yLsOD3KcRm4o_NctXwa-s_yOOcK9_2xPwO-id2nFS6K8zz3RqvxNfqWD80cLbSKb4?purpose=inline" alt="Laswa with Talbos ng Kamote" class="recipe-img">
+            <!-- Laswa with Talbos ng Kamote -->
+            <div class="recipe-card">
+                <h2>🥗 Laswa with Talbos ng Kamote</h2>
+                <img src="https://images.openai.com/static-rsc-4/8xDaHzbzRnDD2dj8nWihCNrWo8pxmG3pshlY1SFo866s3UxT9PHzk752JPiZD4s5vuTgKqhaWZKuoa_cMkWdtRK2tUY3xne0I-4gHWA3R4yLsOD3KcRm4o_NctXwa-s_yOOcK9_2xPwO-id2nFS6K8zz3RqvxNfqWD80cLbSKb4?purpose=inline" alt="Laswa with Talbos ng Kamote" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Talbos ng Kamote, Saluyot, Squash, Sitaw, Shrimp/Fish, Ginger, Onion</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>In a pot, boil water with ginger and onion.</li>
+                    <li>Put in the squash and sitaw; cook until soft.</li>
+                    <li>Add the shrimp or fish for flavor.</li>
+                    <li>Gently stir in the talbos ng kamote leaves.</li>
+                    <li>Cover and simmer briefly until leaves wilt.</li>
+                </ol>
+            </div>
 
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Talbos ng Kamote (Sweet potato leaves)</li>
-            <li>Saluyot (optional for extra texture)</li>
-            <li>Squash and Sitaw</li>
-            <li>Shrimp or leftover fried fish</li>
-            <li>Ginger and onion</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>In a pot, boil water with ginger and onion.</li>
-            <li>Put in the squash and sitaw; cook until soft.</li>
-            <li>Add the shrimp or fish for flavor.</li>
-            <li>Gently stir in the talbos ng kamote leaves.</li>
-            <li>Cover and simmer briefly until the leaves are wilted but still green.</li>
-        </ol>
-    </div>
+            <!-- Ginisang Kulitis -->
+            <div class="recipe-card">
+                <h2>🌿 Ginisang Kulitis</h2>
+                <img src="https://images.openai.com/static-rsc-4/z2lMKg2u4_YmeuU9wjvmcZRavibyzxTPakbzO1LYEs9A11H6UQlJ6IYLOwrW83pGgXWdR84OYiCeMkHIvlCvwiFrK6pO2GhGJLnqa1csf2U64R1w0kgooqAltXRUfOCN7m_imUshca0CmwSSh5lzvLihnhnE6jqQ7yD4_5a__q8?purpose=inline" alt="Ginisang Kulitis" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Kulitis leaves, Garlic, Onion, Tomatoes, Salt and pepper</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Sauté garlic, onion, and tomatoes.</li>
+                    <li>Add kulitis leaves.</li>
+                    <li>Cook until wilted.</li>
+                    <li>Season to taste and serve hot.</li>
+                </ol>
+            </div>
 
-    <div class="recipe-card">
-        <h2>🌿 Ginisang Kulitis</h2>
-        <img src="https://images.openai.com/static-rsc-4/z2lMKg2u4_YmeuU9wjvmcZRavibyzxTPakbzO1LYEs9A11H6UQlJ6IYLOwrW83pGgXWdR84OYiCeMkHIvlCvwiFrK6pO2GhGJLnqa1csf2U64R1w0kgooqAltXRUfOCN7m_imUshca0CmwSSh5lzvLihnhnE6jqQ7yD4_5a__q8?purpose=inline" alt="Ginisang Kulitis" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Kulitis leaves</li>
-            <li>Garlic and onion</li>
-            <li>Tomatoes</li>
-            <li>Salt and pepper</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Sauté garlic, onion, and tomatoes.</li>
-            <li>Add kulitis leaves.</li>
-            <li>Cook until wilted.</li>
-            <li>Season to taste and serve hot.</li>
-        </ol>
-    </div>
-    
-<div class="recipe-card">
-        <h2>🥥 Laing (Gabi Leaves)</h2>
-        <img src="https://images.openai.com/static-rsc-4/85yQLITVJYQMSwFIDfXkpQ0YU-f2PM3azixLFetW4cxC5wQWysXnEbUXGVzSLqI5CeTlbku6J5g01-Omj_V3DG01UXFMyAyw832whVVnj8fNWT3M6B-fnE3YM35YOoKXvnaIkDs1t6_XnI7Go2xl4kmZXVEjkYb5cE9JwvCa4-nIyB1RfUt09-aGkTaqRUDE?purpose=inline" alt="Laing" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Dried gabi leaves, Coconut milk</li>
-            <li>Garlic, onion, ginger, Chili</li>
-            <li>Bagoong, Pork (optional)</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Sauté garlic, onion, and ginger.</li>
-            <li>Pour coconut milk and simmer gently.</li>
-            <li>Add gabi leaves without stirring too much.</li>
-            <li>Add bagoong and chili; cook until creamy.</li>
-        </ol>
-    </div>
+            <!-- Laing -->
+            <div class="recipe-card">
+                <h2>🥥 Laing (Gabi Leaves)</h2>
+                <img src="https://images.openai.com/static-rsc-4/85yQLITVJYQMSwFIDfXkpQ0YU-f2PM3azixLFetW4cxC5wQWysXnEbUXGVzSLqI5CeTlbku6J5g01-Omj_V3DG01UXFMyAyw832whVVnj8fNWT3M6B-fnE3YM35YOoKXvnaIkDs1t6_XnI7Go2xl4kmZXVEjkYb5cE9JwvCa4-nIyB1RfUt09-aGkTaqRUDE?purpose=inline" alt="Laing" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Dried gabi leaves, Coconut milk, Aromatics, Chili, Bagoong</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Sauté garlic, onion, and ginger.</li>
+                    <li>Pour coconut milk and simmer gently.</li>
+                    <li>Add gabi leaves without stirring too much.</li>
+                    <li>Add bagoong and chili; cook until creamy.</li>
+                </ol>
+            </div>
 
-    <div class="recipe-card">
-        <h2>🌿 Adobong Takway (Gabi Shoots/Stolons)</h2>
-        <img src="data:image/webp;base64,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" alt="Adobong Takway" class="recipe-img">
-        
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Takway (Gabi stolons/shoots), cleaned and peeled</li>
-            <li>Garlic (plenty, crushed) and onion</li>
-            <li>Soy sauce and Vinegar</li>
-            <li>Shrimp paste (Bagoong) or salt</li>
-            <li>Pork bits or small shrimp (optional)</li>
-            <li>Siling labuyo (optional for spice)</li>
-        </ul>
+            <!-- Adobong Takway -->
+            <div class="recipe-card">
+                <h2>🌿 Adobong Takway</h2>
+                <img src="data:image/webp;base64,UklGRqQrAABXRUJQVlA4IJgrAABQjACdASrRALQAPo00kkglIqGhNtwcqKARiWwAqScExr/leZtyv3hcB7ltyHkQ+498//qer/cCc8T5wG/k71DaYPHPE7zs/J/4D0FcbfZhqI/Pvz5jxZRPLv6R9hH2j51kEHrr+L6DXv9+O83/7jzn/gf9d7AvmP/4/DR/Kf9n2A/6b/k/SBz1vr3+89gf9hvTi///uP/b7/9f9L4Xf2G/+gzlBIv4126M9L7tkYHOb4/AKks31p/qLbD1rAU3S6g5RPFvn69+znMUj4D1WCSY3/bPFv0dc1shrhfZMuaNdjngyU7ip7/B3C5D4cV4blu17rr9LD3n5tmQ7L35Md5mYNlVKM95XF4/b0gvVCRVSsboTeCBDJvz18bzD8vnU9YlUf1/eAKwO2hjPqFy4bJa2upJwwwOzxhA7O5sFGunGDwm8JVcnHXUPQTGHeALEpgUNeF42eNPjXLXqIbzd+tCv57nRiTUPsXNdM9SmuaCFkHZmG9OhEABd8uInas9k02ZNpq5biyEga9F7ROZ1pnf6XqHorp7n6kRUNmG8aYO/lRkroodhidPkY3bCNk7RysopJkNZzNuxJ6Om91DtnEL2wk112hv8uANWg5bv7lm4gwTsOcFNw+9qw+1yTw9YS2Tpevq7Z675uk2XGqPMbar7oGqZWz6guF9z6JXvV2979r6VQ9kp3RwGb9R78WadYFMjx89GA6gLeOOgYJKjwPbfgvzmuvP489pyNxthdOFAqLe3TFw1UAAtI7VG18/ibmZ8aSN5BQ6iaAshFgXHtpyv+joeBP3DFeAwPLsdju0uNxme3q+Q2vAVg75CMIuYHvgU+rTUTW/NPZ1p6BS2nnfebcGUAEiFDvM8nikYq9iTPPnv+zPnd+pO3eB/j4/0xJpEu8et8IVfgduJ4LmqPl18E5rNZ9Yhxuh4OlU/ez1M35r7W+Zwtkno31bpaRunDsnc85h24JSg7NM/xotlvSneNhn8XV1fHX+8MenlHdXzpw8qaOcCoICMD62yjoeklBPFjPraoQFinxUCoQoBUw1zUXt2A1FW9vDeL1oEamHttE92gFuEzcJGcst/eBqknVSBchMgJT1q8FLaGnGwIEP4OXecE1ZhLL/pFn5F6iajoMfYhZMU1/r6ppCz65BUilRCL25Vf0BvhSfj+o/PR6sm1f2aaD2n9YH65BSGqRWlKl+KuMe/sLeUKCGjXRqmicWBLB2dsdB0zncjpA0ofFtlpcBdfOom0uCHfJhEbIedEeaHmrunqyqIEcwlG6f9eWijpztLvj8mVtI9y69a3yORjB2lLBj/mw5tQ/Im740TTL7ZznKG7vK+mTB7Xn3434mrcM384wIuqN3rnxSh+Hr/Z2rAaOV8vThP2aD/QvdaTI6Ro/cJLOAcmSHm4v5tp5XUHmHc+DkS//8hvPZe63cYovdy31BfWLcfa+zMsEPF506JkU44nQRVoLvJBzYFPX43h7gexV/2bkFkB8adoaZ72vsgl6T0mYBfgAA+re3KK6eXHpMx5TBKq7wBm80QQ8V9Pvl35VBVrLcloEiAk/fGGQR+uSeHKTlYe/Zv6kDod8olIyFNz6ESA/DPrxS3LGr+mYd+gOxaBmgMjIc569Cwb//uYZf7fJU2sl4MiemTTrkK58CCWoODW1G4vzUmIfNwSnmH5bQrb9/ALN/4WfoLid9uN3h750Jd+ZiUx7Hz7+7R/tHCLFCjbr4I3voBgE8J0MjFam0nYJBCClLT73iK0ovhvZdpY0w+WMm+jURYvHXyp19eOlQuONTbiN5Bq+a7mMjPpsBYyxBhvXQA2JJIOrRf1vw3Uo4yFbj9KQaWnSWCb1Z5DzwZusGw9TSfWU/ivSZRu9pfuiijmuRX1FWug6GzHCtKVed8xqt4aiZzS7gn3+SUBwkLhwTnOSbg2eh6zu/pHxZYGdXmHM7FCPZSoafZQ0KRAS8S0RLde57WCppyr9xF9MBs+BXKyxJfvrGMsyHKqNzWvMv4vvSl5rd0gV4S15mSz/lrqufR9wem+ITPQHK8E2bVbZB2EfI4MABH37Q4JRJfNS/ALEQou5Cx+IZi9TycjVrqJAPcaufFgJJRChkegYHlSXXrSFe3caxM+HMjREmpPKm56pzGeuKqCGSZVEQF6QazkUzM5WRVtgOOwyyMT8dBl9UBagFUCac/aLPpHYtm8zqAbIYGaFpMu+JZtdsRcIOmnfsisofIZjibTwyv7p/w5jtPwng4r/JrLXvbcu600PnkPioVk2HZKsONxHu9fmnWAqystGY2jJfF3vdHL5UQe7ZxyX4jHxIBBAsi+A7QpLP29AheWr8j/grpmKDWTL1S3XOXEEQKkaXW0BtnxG0ZWsyooF+FOCCE3PRtBuZiYDmP5l7E+6ieF7nahLA7m2fnl+ldfns0GKZz+BkHSKMl5Af1TC2OwqsKymex+N9VsbaU3HdSD2ePFCtY+ChzxefYCVJdJPB+R6gNNFV8RV5FToQL2mkCgWlRBcm/BmOdm1oPFV/wjEuSYqisGpH6gCfdY6CoCiABXrgVDVm+PVyJetXM9cNloqgr/9LqyY1buPHk532d7Ee/6ruEeoiPZT9FH6zHVUFjnGFENfU8O7VeTW8R0+Uc1N0RoE5FSeYcqHpQqB8BBbBut9bHYn2LjtYG+9BWgN9glDPI/ZS/MMM5qRuSdbNDUcyXKkBkEOqOx7dO9B8VXPNTuOlDvTJhBPmXsBhfR6bTa6lCJSxMf4Eg/ni1YI98Zs+Jd7ggiIiLysJNnnI067zIExXICsp0yU76w/Jc1ebsGaGOeLqBojiMxeHHA07Ir9zp40MipZftj3HC89Pyv9VA66xQcqI5kiZ0wK6IzUlLZW6vWmpqAHoucP2ViN5hJQZ+Ci6Rknq+9rBcS4r5OzpYkLxZW5xaxpUtA6aq81yXzqKV2055W0hdGSg8glkYhvjHd3YFk3M2wt2q1d1/9t/fkPkPYYjPEAacdFUX866dFuRzUF2TM7tnI6IQUOw6ERKwG5wpBb18r11MXa2XPO3k9V5QoGJ+IDWcl6mXDVu2zKdPCA90HBJL06+LwBWoxFPlSLwPkD4TmJyII8RzvKT9r/EdefmLa5/oxvRV0CBEnn17KI3l+cvi3DodKxMclMuiQtkJvypx4Ymo5C1ehKsf565cSldKsEn4xZTeTjrOlmFqBVZlCMXSb5Gggtt58uDTEcS2foh+PUYtWIuGuvNENTzyjZbH2V2slwJ0PaaKiCYhHZviuFKxQDGRTDh0xYzP4NPbHSIZDXEw192m/CkBSxraXZfV3Jx6bVlSgoi/3ieaxXxnKR0np/M23mIR8fBqT0DIjSYEFMk+81sXuzMfpiOUKkhfzfDR+8uzlTS8ZGObWCOLwuuhH7P7PKSf3DpAUgflcAXWVOk2ia+DnV2fTBN6IRxdkenRJnM6pVIYNpI/0T9kt5MWvB/r7ydLxhrGpmDBzMpWXxTwTrPABCrsdZi1E3nB8HVZBssGkW+lAkyosbzbp5xAfl8vqLTZs/kop450IInAmrAklZNkmuTcJw3tO2s6o8AwG8FmcHldAm5HqXljrZxpz/CnkouRA25FYzm8rd8sTatm/yw745kIaYfT9tZIBsV36avoT+SBHagtRLXGEE6fuz5OeC4WgdoVcfwAoru5D1wBj8wyjZp6Usf4D3fd2Chum+nTrA3+XuK1NkKS6vC1P7FPyjvzX862WBCCDTbFH42Mrs0EzmFOWVKbYTWleCnolW3stQRHX+5IQnwLHdVjyAIwdAGNvFioUnZEYVEjAAXv3piJmNF6P9bmYcWZ9eGhw9Jo/PNi2VA/T/uBgF11nqjHOBrbM3ERojcWhdUFhAs03akaCfFwKzSc1mWY+0StuRkPpsdB3OrePJ17xpIBPjNxxzYmD/G3pDxU1NUbMJZVLkqkWmczb9pHhDfEl9lwL3z1BYgV0uApBe1mOwpKk8pqzXQenTMW3tEOssYJkJE3CwT399NZo85VPmDHyosFTSAtsDIP/zCpu8KMWFmD+aVfmz7UQz7q9F2Kawh0Gq5/PoWGddcC8yz3wyK49g8vepz/yAZ54pnWk+qTH66ROM0+lnpmNu1+IMSaFSk4BcJkSZENEh6OH/x16ryYjtve+S8xEAxyFtsTfZLFkrQkHQCpaUzY/TOic/6K/KlgKr1UoKJsh3HH+QNIGJnG4zPpHY7Od+T8oVJxTJ6YRYld7k3WWJdy1sDDkC3ZEIFi/JkkpkC232LPr+6YLYQqctyGaCXHvy2whpnJmUXTqEOvIyAPjC59mjNQQmiUDyvBWX3ehWOHwmwuHJUuCHGhOIp/Wi+eL0GdCL0xy4qRQO96GgBvbqfgdYey+b6jKiO255DTPqbTRB0mDRozwgIMimRlncXGFIZZRNrpVCftaNwqHredtJCT/QQeNjDluyzuSRdDVmwSboz8LIXingemB7059VX5utvHYCUH5j9QcdLSDI2kMneKALPMUlFBsdaPgiVBTdt6CeMYieo3tvwVhmf9iVSm9Xg+i+zFaHNiHLzdB0pUeKOmZnao0R9bKxJ/GeVQ10FZpoGQ7FOVJLlP+6z9w68spQQ5wPShEnA9IPG18m9fW6tgM8TO5B2OjUzRt2W0GnI1bqpQ0S9kSb1KIoYSjHP5Emzql5lYE2EsKb5fQMUC0GXrGSth+7jjp2Q2/PGQTfqEldRHr+sLRbLft5hwsinpnCwFaLDH8uz3Xp4fMg3dWfaz5B31rrDtFBdAT0RscInkLncxuHB4YqLpP1PMuw6Owt7VRALccRVMpR7WuSZkxAiujJxOUK7Ll9jeFXaEskPjg9oDQDGdaCooUu/K9uZZxCk+f9GQgu3cHQh79zPQi40QHEqxZCXF52kL3UcK98DLqE7wsPSvdT/o4QafMG5p6VTrn2zs72hXZoGEg3P801jCWozjgZvmNq8lyL38gCbj1cpN1xtPUg9CP3iNtaVzsEeBB7swoR0txLJFEGlKEKumsmw+SplLyJnlLuSDfUaaBvjMz9cc6VhbxtaE3tlY70YPEkpB/FIz0zntIUVxyQUzuW2evDFP4UutGnuBYhWFhzHRq632UKt8Q6lIeCFsK3jYSb0w5FMcWo8LornMPvkHqHJkEXtlH5nfR6AYMnJwk6bpiHEzVQ/TndrAlG0pNtv4tuEdhHtcqwrOtZtoaGy64KiGUq6Vf8ORL2muSodIf5dW3S0b1ypf+l2DTYSATTBt5li40/sKMKtUUg2v9c9s/M+EgogVbGSFsmsPCDgk6tcSspv20wRrxV0MP/483ohoiUcwpwsomiWCr+o1gmFkR+7sv5Ni5Bdr6iN0uHerFZ2YqFY3zxzbjnvDzjSHwnTBNgsxDqKAzj8PG9H8HRObP8T96LtC6sxnNZcGAShHKE5VXFASqOA8C/yCxQNHLJe/33W+MBy86+UlAvQSdmPkxyEiQ0sPeeAJJGouTzEDqzhoUNyitBVPT+S7awyxep+xTMFmTcwpJhSt4djtwjyOahkyU3ghFPmswEjybuDurh0Q0vVYrajjIfO9q3z2ikdPWeLuRzSpE+Y3wTkkJGB6GAEBpHjPRwzDzMV+g/W0cgsItbEcL6lnqmvjGwE9t5jBFs1CFueAvTLy3y0B7HokOPpZ/v3nshUeeYgogK+EnlL75D/u6LjrebF0tewGtClWth1axfLSjuMwjmxkYjs73KBSFxjUvGm6U9T6AA9i/yvT2bvUrftUMmL+7YH/UdeO779w+qYbuVmZcOncQQY4zvbHGeLp1YrP2dzwtcvo05TiCclc1Dsm5+RYTSOKzPbf76Tl6P9STLgljU4NmxDVK6VIgYegOrzKclIcb+MyumJClK7GmJfUdkJKYth+eciHzDgvzaJ57ejMSDUbxJc/tM5KyRq1qLcP63O7AEGUsS9M/g2Ctk1OrqbRwtGud79sQkjy+29GbKM2/vCPfU9Ov5kKnZXUZ5RH72T1PAV754DPqt1fnQ4dg3xvuUlJa+oWG/m6zBL2fx6dbz7Z1tV/NR6/rOiWLCbg2zZT6fBLMjt/ZOnuGyzOs9y1UbBzOFViiLnli6zBx603666ZfzkuDihGtX0D7R5P2rWHKuynDkefBuBUtmH3RLnupZVSaWSAxivtDF1WjEfhJDcYI/4BCe6OwIKzmDWc2PtIym7Dxs0DX7w/xpMLxTo5N8++UdT9t+js6Oq+n/z5RqM39mn3MYIFiHtJjfGa7slgszdL1OtCAeepw2Ga66bsOd6fnHrTELG6/f8RMXMsi46wX50SAxNtrkZqMWWx0DiggFlqg8u+RyReTlIpL30tYH4QAfrtTEjs709YLK8Z/b33Pxf16c300uLcZ/tO6E0qTKgOgrU8SiMPDsVLgi0ZTwMRtdG1JP0UOE1+MARTXjMepZciyRD3XsOLkK2TlAimecmPC/JUZ7llGt8AR8BQIqEL/5EFhmwEbEebaK/suKOv14ZugCycKuRNXH5jXG0q3aDUKKLdM25lW7u5/4EWaWI5cy2dPhllPhbDXLfdfF0/iDx/GOdDNmPZummBU9ak7fdpAR3dINwlY1KuhKFd3edYkEpNDTzXO1OA9E8aNRpjuFd+mUCm+sChHuMwGpqMHD+z750GMzJAdU+Me6dh3V+Fhhf3KbmXPQDWXTN38LWQROnjdJNdAYv8GqhwEChxUdV0X+qbVPEH3KEStd/xwbAfxNRFH9CUZ6LS8JTwgRGaya9prj9ccXPWPp3IoN8PczSThsFZRU21vG5avNF3McH7Cxfp9Zi7VUgFiShbexGq2GzSvCPVm1GvDA84rEdUdmJfGc8Bt1T2AwJ+2pqXPH+Y4nHSV+mZJyNyDaUNDoLMyoMlVtTfNvQAiIsbmGkm7jZGHCk8Di/4NShFiVkF5ZexFPGPIATuGHtEIwJg5x5Cb31VaIRqeNNNFtRycMQRo2KhJrx1kOMyjB2bu9u+A28q5N5DOWjWPXTG7AaxnfL1bEndiIjmJpiBE2Q+VH2UafPt/DaRHylc0fRo6eWOsHjLWUikEcC8x7ktnl998ZkQSiVhTdSxckKTPPTYC/9R4A1n5yvx9WL9MK0v21now9ryEhY9IaufuWK6tRQYw4YJQrNxV/w2aBHUKg1ST5tmFWd51BykqOF/oaY9PkRFey2DEbhr1NufvfZjeLffZYH9mwmLAE8UicZuJuGSRxD1M44oLGtzRJuURFKdpGWdidELXiYnGEAm1AyQyyNmR6p2RFHn1AqWzLB/SE9AGGiR5r93kWtvPL0dVus0DlC6DfdVuHaid75eSGlGg1KuKMNfF7uoB7S0YxSX4qQJzW3SsWktWp7Fas3+dRTjdF1pbAk51UPGzoPsyANorcuKcIsg4J0WPN6Pp+ZYwTnx5EQMeEkxgvzp68ThBbEFEDCgRfBJsfgbqSCFRd9ROX+Peb/0w05JhIxKg+qyod7cNVA+F8Hz9x37Dd9TBD4qceZPhGqcANht2hgShsJselCcuKZDh/qTCDwfsxGWrjVEEVQCCtkaK3HSaXcaJHSdUbSvbjJ3hipwTcOjBR+2GKiQ5rihCDll28xJfiE6mA4qmYVf0MY18ttHPqLeD5sGs4qfgkukJcmrLb1BKZTFTblHzje0XF6rwHmH1Xs9NUj4xn0HTR5LjIEO3VZKiLp0cFaafZNYsoejiT9RJO6ShzC4cC6DW5zqkMVwbsOzGs8MKwiNqoCmM6uq+GehMiu357eXDptsNBK4z8CPgn7cpZC30JZGJu1ZUMivjOxjbhWzPgACPseupmJDS7tvmDJVBe77NSidwfkek/Oh5x7wG6ZjbrH8KeA5Sjhjr/kKPBeHsiY+0btIo5OiJFZuJgifQVJvDaaOQb+ky/M9A0ocyOrBFH7Kpg2ek6Yh18AzRCuQw6l1nkVA2p5qrUH0BZFvqXURH3w2kHKk+Rd3c47qWB8J2Q6eBS3pafGDECIYBe4a6fJefPKEHIvTu130H7Ou9iFfpy/MS/hUCTB1Xk3VfIojlsblqHKHPzTBy5wjAAWmas2Zu5de12Aq8n9pwOzW46ffmnHUjyAO1ULbAxjR6jygG94ARig7WPjSxAZFPIVw+Wu0E7XJV8DnncO0IT+L5IvO/kpeKO4L4NDJGuWZ7TbTb5Jga/5PZAAAf/uKYwXrG9gkQ3y/ZnQ6DZ8ylEAKF6SGmYIUXTz/luosvDKKvoWOPGfXJL2aYKPfMC++9aWYPLPEcu6G/cS1RXkK6Ls+fQiJA/oiB9u6p5GVxPZ6jgJc9S4tV5QVmn4pzSNcp4Wjv20zDFGmFLAv5441n7iWMBJBBS20VQptx18JapMHT/BRvSWdaBDcISP0l6nVFH1nWTm/A9rtJITSad/c55YJ9ZB/lr4X1kuGUHueJgXJADy1P6JLWsyJ/+xW4eLnpjlm9mt97bxlKsE/XlZZDYkvhNgkZ4rJQAImeyKTEg3sA/NU2BLCwwlqpWJxfNDrW9nAGtMLKSh/5zNmPhTl6w1lFGHEIkCHFWQ4G5MHtGL9beZlFeqtI3YTVt6GQdFfOlu5CeXrojkgDhmWI7odF4jTle+wPIMxzeUDebFg3hMySmfuOZ46J0owcHqQ9qJzc33OGhcf5Dd/YLh6vAp1Vf4z5fd1Q1sXyywzktvfaRJjvJbnyTRbE4LbzvOe57QDkhYkfCjF2p0t0sZAkdSrCVZ9YKDhXBlLFdXnl+49x+iAQgrscqUUmSmYGRHqfsWWIhx2SpOD7hSM0KbCAtTkVr+kG5PRQ4U9TWlgdd7uqjqma+u1rtXm+s8l/vUpOMKwSUxuEIyTSi6b+w8KSlZ4PWxmUnbn7bu0uPdDMz2mbn9yex9C7cIeaDG8y4Kg1A/EdbaKaokqLx/6j9u+djBx5etstUUdJ7Deozmj4tzEpRVgf6P4bMdKAjfhhpVVTQw+mi9SgkLTEUhSmIZuGbMJ8fRwvnh5O3WVAfu97G702ZyzX28QKFjb98rBMx2N7wxUuViIbHh5rj8F5RbG/6TrEMoWqzjrbaLwEy3p9mlKWr3ULwMi0Vk+iMUqMoajUmH5RTsLx+qPt3zb5rrK6mFC7V/VezwohIHtInxx2SrRKvgx46p7J9YzFV+DPAQ64ojsZGRKyugtltos424VgtSajJBiF3JRcXSYjs22mjkobLowDM081XGPWdVF3Q3ABru2O26ArRN9glthvX5Hb7RMySjKQ8QgyeXEQexU/P4h0YD1TRi4q8IUFVbbhv2OgZ96OhvN5I2fKdXn30ulf3Z2qYWx9Kp30Uk7Rx89EL2aF5tXH1XXUMFrGLrCqNQTrpuQf4PIS/2ZdbQ/uE09Xem32RCwRLYKVdWTHp62rDDbTnvJoR1Cc3o+VWgByKhXRYVxhoKUA7r6+1weMU266gYbo/zFeAypJHFExZqrU9xlmwlCSHi1me6E38f8yhiZfE50b1BZoJTFNmpG1ihLPeDDKEsia3EHavqi2zdGyBp9im/YvzcHuNomhoT4n02v2qb99Fov79ykGNcdHiPFvSbsMoqWmYj5fdZIecn2++nn4CtcHOBi42vUoa7EFOpjHHYYWf5vowu7f0UgsM1kCr/e3v+vTK0lf1frFb6NfTwV39QyaQy1ivA8X7HPkjBh23ACF3Puml2TgGnhOzO2msvM6SK2SyK4HTXVpGGd29tckbWmbUbcSAP+jgZwOzO342IuobRIOh456Mr2AnPW5I2EqXTKNwUFElKzSTzrBMAnHrR0RgJEUoAlNxpihh0KwT4GGD3B1boN0TsyZhu2zIRYOJyr0pEuts5B9EPpL2/R1g7VBvInkJD9WFpWsdc6nCEQl+IqjcgKlRi7qq1qlhcTo+jheAVEJG+Scv7M6uyliDIEPSW36FJ4BOOkIal5CjVVyIJpXNp+KPNh8hI6GXJlmB3DczKgyCJz3wEwwY+uMARTNQdK6XoH3GUFm/xaNK0hgk4wokVviAosy8kYiwLRJ5JhTwilPw0hprjtYw5YoSU4DM2y3guaoysPEerTfoq4/BmITVN55Fm9r8pUxrp7JHjGmzCKn3jg0HFr1NG/H+FQ38JNhE0DpothHn0oUGDtZI22UyvlG38XPEI68pNsJrKwLC7vXUa7IS4QoHrUPYHJtL1SoQ2Krfes69+/8Bi3KH6tO5O75L5wa27N0obKJIvazfJQiXrIgsVSbRidh1HvHyxzC+SHy+pNgWQIMY84dzt6ciL3XUvjaCkhF2R8RY9th16GJxirWuer2RjKviJdJ6pgGc3MZEtTTl2vZDFXGRlFo6/2AuEf5MgKDQDgtUHc/dc6gqUmaN42Sb0tqnr++W08k2y/Q2J5jLv5KpTJxTHiOH8Nx1LxuUSoiZzybbzLy9Kp7hdOftqDThUN7mlo7JVkJ8ANJxsXigQQ8zhiVWaCJbk12iPyLdJ+orF581eKyAJOxZR/rGyNhz/v9bFMBalhswu2lOJRAT2Mf9DElslu0VlguDFXXOy1liwRCmS1EaBJHzGjg4TdEpYDI492jeKcXP1XS2Mw9/UOkknts2GyGqagAN9PIEDmJSSWactQgfT1E/MOOVeKr5WHyJ6QRHlTTyyKfTWKc/QggUWnVpnz8pYC4iHsJPr/S2hPVvPTMZlzNA0UmQ14xTk0ZbQd09pMR+AbuPp0vjBYfcmiMX0/x7iSLLBcsg5TmMdYKrVDEewoNJK6kabt7VGXEY7rVX6zaHY62q36sus/7733PR8MFpZTM6O1Qpy7RZD4wkH+prPp1ac0S8z5M5vxgMe8gd+8iJ/ohf+PggeZIBZzrftgXtfWkJmcvwp28emRn5kANW8eTPKyaVs+9No6LACIM5mtn9iZyKedE8IhlLRWaa+vtG4hcehDvZ3TMHGjPoW8YbAEPAI2xoxLcHC2Cw6FQG5EmougeKGgh8mfPaIh4SwaV53zJk7CxSXuBkHpkncaopyJzcqvhv8CY47zRg7PEVEJoRSQzwL+0rnISJm09ydJ90Fq7XGGIfc+VS3nJWldN5LaY5b2DAwrVmTkQ6Gkaj6ekY/vRpDqxnfWr1/kw8n+M9u0M0+YhAFWYsV5d98WnPtoe9mzOWNGkNAK7OuiXJUpToPWyzD4DGHpmcNz7I+wmz66OjXOSyzF0GJfSzxy02Idbf0z6SMYPKfPt2xCjyGj59ppRSWi3PYOXNaBNHsblwXoOLJAOcjDCaJ87GHoc8sZIGRtt9ngGRysu8ghkPX9pdnH7HVt33xDhq8bV21R/1L/mxk9jInRrBup5ilI/0qXFu8d6AMWopQvC3SL+eUCcyxlSFO1y9waUdvADQVfGkhB/iSGE4GVTUVpKGh+9oq6abW2OR73UEygijPfvP4oW+4OpmDYb8C2o+JMqBTBtXxIUJhPjswTdm0TVu+hE8Q2qztVwcq9RifhUhD4DJx72/7Ie+V12xvNm1thVITShXNB17IuUIxJ6iGXCYAGSZp7VVpQl5Hi/sEb0Ker1t2/A5gg9FkshVlAQ4SwKbxhHMZZ9bwSprqqSjM/YXpCSt6cYMiJ3z/9mcCORcro36/sNSQ1knlAukpRfHSaGKim/aR7M8oeUeGWBJR0zej3UimUT/QTUexxJD2x9pib4/3SIyxIHRHyUng1TkXBKOxSOPWa90lUsN0FiYnFFTcQ5AUkTPffoqZRdHJWWCLbphYy3s8dPIvarYUKq1BNKXmEHDQlqIdwUyhM+BJn9eHFTUVgkseXjze0e//gytLA2bQ5cNz7iTAvLUL3py/JPoFA+nvz2MiYdAhjqVF6s3oUT5vriJIK4Pz2hFpuefU0rbqVGjbHUh/9Gda0070rdC0X72k1pvZ4t214yrDpAl+pYry+hrJNkwl+ABB+WWg5A7fbDX++Qv+/n6MoqDBiE1sjLaaFJ/qiEapIlqVzJGMh+EF6s+xzWHr2BOqx9BDPHlHyZz2AZbESEM/KphXLQiPFq+GByLW1wP1XVsPDkshHT6sO/k5h9+6OhJ2Hfx86OYLP4ZkDHOXXL7r8roV6QxGah7+t3GqSptdItkHFBU7DkJO7eZE9lLq4P9V7fEcQqXpKMprLkmNBng6lJB9n72ff0ErkS/G0rUJS0QGOTZAyYlt7UsAfARv0NxlpaOh9tBv0jYyPkNx3sKWIbgsG7mgw/RyzhcnQaQALGXIKGneyZiC8d5KlnTl007NAS8+T7W9LXeQ7oAkDzwKaJ5M5DnFmVeMownjC681KdyoNoR7kvKbmDFVWLRSW9wfkFmZJUV1tZXwqhQjusU+D+yA7lR1dHBnRyyzlLxoJrR5UWRU7g40l+nbmYkhNU+t/v/WyUR0vll+YR08t4a/3zKVeyEZusxgYyLmiFC/GKO8h/D3Udrd9mhtmPLOc+a/MuknBUXdocOkUJc7/p9D1XudDwMCrAovDDp4Nr2QehPJudY6goILW7mFhMNOeoc5ba1tRYLrGd4C4DRvq9Kb2JaFePtugUKi3N+4njobAYFt/ctI/YJrw/fjWc3oOrp3KUMLN6dFm+EPNbDhUxjev7HBeyZWq+UFyLj1ejykEHFA/0yFfUHNQU7a3w91XUoVuBs046vlttZztg0QKhyDQmTZI1QGNBk7UdHvfFxY/UuKIFdxuMAEMTgzs4Dx6cVR3vyiujrfFzzswKbyKI+lOvgebxJkYwHdHhIu2JqE1eH2koeTq7/s1hHeUwNiEGhNXixzJndBlu8n/nGCPWZ93/pOfPr+GyqLrJfu08lrS9NlzxO+Xb6Jj1m2y0EhVrL+IOvHqImnPcaMiuTwaCXFKAfnvr/8eq9qIrh2J/mbNTzdklntHiqd2eROOowqts/EFdKMnLc1EcaqiJGB2ahAMA9K4QiKjY6VRgYTHg0qB6XTT6FSyPbZlVwYH7VDy1GRm5sTN4+4KDg7qIjZrvAtP1VfQwFb3G0j4yQfUEDweDBHQ3YTlOwXddAaV1sEEshGyujfozaN9XAuDC1zxWaI9/SbpY65wMkglM6YTeBv2EbkId8dcnNrwy3sirbYRhxjfjO8BmCk/2TpAo++DrqO4Bg4xfFNeiiA0S6K7GJky51toEf+dTvtJl8jguw/aoM9LWf5DzBKVV4LfzE3iGcKpvobZgCyexkdbMlnxjqXdb79Msk6C9vhKnFAIUmlnu3MbZv9fCWOLA8jp66o0kyScrEtwk+5IpSdFAvSgdDgq9R4FHJZKJ8tSrmKS60mQ8rhcKF2Q3hi5CNu9MLFiRBbjWtjtX8kTVer9uJ5ZPHsIKlrR++R/m4iZfQh0nAjJC/TuUpEfpxiyr5K+zg/MJBu6D1uQjUVie9cMJWKdTu/9wVV/Eg9KBRdaE6KgqTAwYqxmKE2rcQQNdZ592oLHlaz02e+4Wy4UOmb3ZMkF1jrAOjSuBo84iNSekmsl0M68T4zqxkEQEUjeRPkq7c3yXW14Hhkg09xb9tseVxRuqdu28+vfmbYF/MZrDhMYfnVJhf2DwXnNCnz70g894gjJQ87QHStUE9fWJGMz4ts4vgK/Wqrwm0HU8MWoXe0jmWBSHzrAQqDtYKxoj31FfQvsJbphDOb+e/BXGW7YLte9uyC1fnn3rOUsC83SjvdFHd5MqUFcBglkqD9q+dyO/4X6yegoZ7jhZa4ig1mfWTl78ugv4xaqIcUTw8cYsJWD0AsKQJ3a7OZbaDU7HjZLOkMkgfWFqnHME3jzQm+nn+9sSeo1ViSKBoLzoyX9BI/GUcG/otebom/YGxIPFSiMSlCvDdynPbtwjaE3eBeKzD5jz7sURHgLY71Vk7CMnsORjHBcuQ8+/qASlGLf0BkOSQuK7hmqD6cd3Qg1ih/TQKGBw1WlciFwOjiasLTmK/lxvdhwtCk9n9HLsic2/4W5WZPxJYVOdsV/J88tgWFGt95M1HLNsoVb5kTHlXgdlYE6snaUwlDq7zBR3Akva+VlhLxbhh+rvbrfQuk5Ag3DtnDRulSX4os2v8NL9+GyTbfySL8ELuo8oqNSwnDkK05TDF0t6+MG/f2HPxDa+fblj0H7GrZ8jgQ3yeimezVhkyr/6Nd/rT1rm0yBFRVKBCJ+mdgoifmxLTM0j9JUSR1MNPMrZyhnbLyT0BzL4ufHuxMoCkI3SEohT9uUwh7K3i0g39kdBghao29jwgO1D1Z8ySMXHn2qazHxDlnj+cfvADYLusT6cWBzQnSQh72CowBH5dhglHQ+dVrtl/Fu+RcR2UHi8mSLTDsAviJM+EqP4SLpy+LiWPgF31LFZNd/KTJBi6qSc5V19j69QAZXAaMI5hRWzvdIB1Iwk37+cHtRci2Clx/h2X8YZ2WIyWecisJVWFRkK/XDMuKix+/TRNW2Jf4W4mGiRXu0PntDowD1AzriI02gr6h5ueXwCbM0DF54MMv19EXZWy8gssKcqLRyqobexlMdO5dc1yYRCwN+dyDkKj5erqFNZh2iGEaXNl/7IysClwR3446dCrtn2LugNM0XGZaVL/RFmoKsv2I07c2s5WHBb2P9Ycv30OThuMHW9t9hm2cZTjmBvgdik2kScDYLTlc4lMXYXlMcRSYae+Rop98xoAhrb1Rwv27BZtmScUhGoHlH0zHWIdzJ+mKb0OtRGuD2zCLSKYRZdqjLoC88mv02VrI2dyjWMifhvfisarS++Hag7yCbu5V/OC3YOowPb+PmTSX1X7gw6qNuhqcf+xgOJGRV48I3RcwcxkoRle7YincwxVY05RqVIneafBcs4oz969WcvZihQIgwyY04Aizt0MyVoLL9dA040U7mSzUAfC8qYouKreq9MXXtKS5m3MYEaIl3Z2QBf7Vm4bCDpUMEbKFib0FhxnNI55PmvQAsCDQVAAHsxGYl86eg1fgmubZW3EJwIAvJYp1d2dLKFoVS3+EgVsjml1P0Rqrui8TZ9CkEJa/WGAW/Z5uL/3d2AXxvpL/RoAAAA=" alt="Adobong Takway" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Takway (Gabi stolons), Aromatics, Soy sauce, Vinegar, Bagoong, Pork bits/Shrimp, Chili</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Clean takway and cut into 2-inch pieces.</li>
+                    <li>Sauté garlic, onion, and pork/shrimp until fragrant.</li>
+                    <li>Add takway and stir-fry briefly.</li>
+                    <li>Add soy sauce and water; simmer until tender.</li>
+                    <li>Add vinegar and chili; let it simmer without stirring.</li>
+                </ol>
+            </div>
 
-        <h3>Steps</h3>
-        <ol>
-            <li>Clean the takway by removing the outer skin and cutting into 2-inch pieces.</li>
-            <li>Sauté the garlic, onion, and pork/shrimp until fragrant.</li>
-            <li>Add the takway and stir-fry briefly.</li>
-            <li>Pour in the soy sauce and a little water; simmer until the takway is tender.</li>
-            <li>Add the vinegar and siling labuyo. Do not stir immediately to let the vinegar cook.</li>
-            <li>Season with bagoong or salt to taste and serve hot.</li>
-        </ol>
-    </div>
-    
-    <div class="recipe-card">
-        <h2>🍳 Ginisang Ampalaya with Egg</h2>
-        <img src="https://images.openai.com/static-rsc-4/YmoIUqqY_5vJ6hd5X-JiHA9p4ovPDC-nS1D7t5nThXzN1fS4F7pTutKxGzNPRpXH0ER2zbu2zJ_ajwidGzvQFKkmiri8qm8sDMggOBtba7gPliXJvXbj5lYe3L7Pce61wdtL0vpbi_iu3W8vdV2X_lQ3QVgOVWO9ltOPE7xkPaQ?purpose=inline" alt="Ginisang Ampalaya" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Ampalaya, Egg</li>
-            <li>Garlic, onion, tomato</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Slice ampalaya thinly and soak in salt water.</li>
-            <li>Sauté garlic, onion, and tomato.</li>
-            <li>Add ampalaya and cook briefly.</li>
-            <li>Add beaten eggs and stir gently.</li>
-        </ol>
-    </div>
+            <!-- Ginisang Ampalaya with Egg -->
+            <div class="recipe-card">
+                <h2>🍳 Ginisang Ampalaya with Egg</h2>
+                <img src="https://images.openai.com/static-rsc-4/YmoIUqqY_5vJ6hd5X-JiHA9p4ovPDC-nS1D7t5nThXzN1fS4F7pTutKxGzNPRpXH0ER2zbu2zJ_ajwidGzvQFKkmiri8qm8sDMggOBtba7gPliXJvXbj5lYe3L7Pce61wdtL0vpbi_iu3W8vdV2X_lQ3QVgOVWO9ltOPE7xkPaQ?purpose=inline" alt="Ginisang Ampalaya" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Ampalaya, Egg, Garlic, onion, tomato</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Slice ampalaya thinly and soak in salt water.</li>
+                    <li>Sauté garlic, onion, and tomato.</li>
+                    <li>Add ampalaya and cook briefly.</li>
+                    <li>Add beaten eggs and stir gently.</li>
+                </ol>
+            </div>
 
-    <div class="recipe-card">
-        <h2>🥓 Adobong Sitaw</h2>
-        <img src="https://images.openai.com/static-rsc-4/nsPfBv4uqiO_uuwzoECxpbxGcswhWOxGjbYtQAH6jiTzPRZDrK3SPi0zD5Iod_07zYKxwt4qSffnB_wuT-SApK2Dwq5R0jgn6nw_hb-GU8x_JaUBoXRJOUJxqSOjhsd4UHTiuF3J9UGfk1F3ORyMZWfr7VYmQ9YA7zFEYIQ48rw?purpose=inline" alt="Adobong Sitaw" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Sitaw, Garlic, Pork (optional)</li>
-            <li>Soy sauce, Vinegar</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Sauté garlic and pork. Add sitaw.</li>
-            <li>Pour soy sauce and water.</li>
-            <li>Add vinegar last and simmer.</li>
-        </ol>
-    </div>
+            <!-- Adobong Sitaw -->
+            <div class="recipe-card">
+                <h2>🥓 Adobong Sitaw</h2>
+                <img src="https://images.openai.com/static-rsc-4/nsPfBv4uqiO_uuwzoECxpbxGcswhWOxGjbYtQAH6jiTzPRZDrK3SPi0zD5Iod_07zYKxwt4qSffnB_wuT-SApK2Dwq5R0jgn6nw_hb-GU8x_JaUBoXRJOUJxqSOjhsd4UHTiuF3J9UGfk1F3ORyMZWfr7VYmQ9YA7zFEYIQ48rw?purpose=inline" alt="Adobong Sitaw" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Sitaw, Garlic, Pork (optional), Soy sauce, Vinegar</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Sauté garlic and pork. Add sitaw.</li>
+                    <li>Pour soy sauce and water.</li>
+                    <li>Add vinegar last and simmer.</li>
+                </ol>
+            </div>
 
-    <div class="recipe-card">
-        <h2>🍅 Ginisang Okra</h2>
-        <img src="https://images.openai.com/static-rsc-4/15-4rKlHRYU1-BpuoooHViZfcmS7J2pVu8dgkJy7MlJecSMK7qvr8zYKI5tp8O5t8g67yL3zJDufb9Q6mwq80mhusLSxnSbiPe_7pp2bSf90WsWgOu4dZcBh7FHESGZteyWK0N0cbAcL79gBDV5ZUk_vZfecjly9anwFGaTO0EE?purpose=inline" alt="Ginisang Okra" class="recipe-img">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Okra, Garlic, onion, tomato</li>
-            <li>Shrimp paste or fish sauce</li>
-        </ul>
-        <h3>Steps</h3>
-        <ol>
-            <li>Wash and trim okra.</li>
-            <li>Sauté garlic, onion, and tomato.</li>
-            <li>Add okra and cook briefly.</li>
-            <li>Season with bagoong and serve.</li>
-        </ol>
-    </div>
+            <!-- Ginisang Okra -->
+            <div class="recipe-card">
+                <h2>🍅 Ginisang Okra</h2>
+                <img src="https://images.openai.com/static-rsc-4/15-4rKlHRYU1-BpuoooHViZfcmS7J2pVu8dgkJy7MlJecSMK7qvr8zYKI5tp8O5t8g67yL3zJDufb9Q6mwq80mhusLSxnSbiPe_7pp2bSf90WsWgOu4dZcBh7FHESGZteyWK0N0cbAcL79gBDV5ZUk_vZfecjly9anwFGaTO0EE?purpose=inline" alt="Ginisang Okra" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Okra, Garlic, onion, tomato, Shrimp paste or fish sauce</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Wash and trim okra.</li>
+                    <li>Sauté garlic, onion, and tomato.</li>
+                    <li>Add okra and cook briefly.</li>
+                    <li>Season with bagoong and serve.</li>
+                </ol>
+            </div>
 
-   <div class="recipe-card">
-        <h2>🥥 Ginataang Tambo (Bamboo Shoots)</h2>
-        <img src="https://4.bp.blogspot.com/-xTsiBUDJDl8/VjLiWGPU4rI/AAAAAAAArqo/g49aqf8nwJQ/s1600/ginat-an%2Bnga%2Btambo%2Btagabang%2Bpasayan%2Bilonggo%2Bcuisine.jpg" alt="Ginataang Tambo" class="recipe-img">
-        
-        <h3>Ingredients</h3>
-        <ul>
-            <li>Tambo (Bamboo shoots), thinly sliced</li>
-            <li>Coconut milk (Gata)</li>
-            <li>Saluyot leaves or Alugbati</li>
-            <li>Corn (shucked) or Takway</li>
-            <li>Shrimp or smoked fish (Tinapa)</li>
-            <li>Garlic, onion, and ginger</li>
-        </ul>
+            <!-- Ginataang Tambo -->
+            <div class="recipe-card">
+                <h2>🥥 Ginataang Tambo (Bamboo Shoots)</h2>
+                <img src="https://4.bp.blogspot.com/-xTsiBUDJDl8/VjLiWGPU4rI/AAAAAAAArqo/g49aqf8nwJQ/s1600/ginat-an%2Bnga%2Btambo%2Btagabang%2Bpasayan%2Bilonggo%2Bcuisine.jpg" alt="Ginataang Tambo" class="recipe-img">
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Tambo, Coconut milk, Saluyot/Alugbati, Corn, Shrimp/Tinapa, Ginger, Garlic, Onion</li>
+                </ul>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Boil tambo for 15-20 mins; drain.</li>
+                    <li>Sauté aromatics and shrimp/fish.</li>
+                    <li>Pour in coconut milk and simmer.</li>
+                    <li>Add tambo and corn; simmer until thickened.</li>
+                    <li>Add leaves last and season.</li>
+                </ol>
+            </div>
 
-        <h3>Steps</h3>
-        <ol>
-            <li>Boil the sliced tambo in water for 15-20 minutes until tender, then drain to remove any bitterness.</li>
-            <li>Sauté garlic, onion, and ginger. Add the shrimp or smoked fish.</li>
-            <li>Pour in the coconut milk and bring to a gentle simmer.</li>
-            <li>Add the boiled tambo and corn; simmer until the sauce thickens.</li>
-            <li>Add the saluyot or alugbati leaves last.</li>
-            <li>Season with salt or bagoong to taste and serve warm.</li>
-        </ol>
+        </div> <!-- End of grid -->
+
+        <footer class="closing-footer">
+            <p>With patience and care, your backyard can become a source of fresh and healthy food.</p>
+        </footer>
     </div>
 </div>
-        <p class="footer">
-            Healthy meals can start right from your backyard—simple, affordable, and nutritious.
-        </p>
+        <footer class="closing-footer">  
+        </p> Healthy meals can start right from your backyard—simple, affordable, and nutritious.
 
+  </footer>
     </div>
-
 </div>
-
-</body>
-</html>
