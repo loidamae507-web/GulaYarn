@@ -134,6 +134,34 @@
     .plant-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Ensures the lists in your cards have the correct spacing */
+.card ul {
+    list-style-type: disc; /* Adds the bullet points back */
+    margin-left: 20px;     /* Matches the indent in your reference image */
+    color: #f1f1f1;
+}
+
+.card li {
+    margin-bottom: 10px;   /* Adds breathing room between tips */
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+.closing-footer {
+    width: 100%;
+    text-align: center;    /* Centers the text horizontally */
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.closing-footer p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #dcdcdc;
+    max-width: 600px;
+    margin: 0 auto;        /* Centers the paragraph block itself */
+}
     </style>
 </head>
 
@@ -303,14 +331,18 @@
                 Gardening is not about perfection—it’s about consistency and care.
             </p>
         </div>
-<div class="plant-grid">
-        <p class="closing">
-            With patience and care, your backyard can become a source of fresh and healthy food.
-        </p>
-
-    </div>
-
+<div class="card">
+    <h2>🌼 Additional Advice</h2>
+    <ul>
+        <li>Start with a few plants and gradually expand your garden.</li>
+        <li>Reuse containers like plastic bottles or pots if you have limited space.</li>
+        <li>Gardening is not about perfection—it’s about consistency and care.</li>
+    </ul>
 </div>
 
-</body>
-</html>
+<footer class="closing-footer">
+    <p>With patience and care, your backyard can become a source of fresh and healthy food.</p>
+</footer>
+    </div>
+
+
