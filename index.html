@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Cooking Video</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>GULAYarn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") no-repeat center center/cover; min-height: 100vh; }
+        .overlay { background: rgba(0, 0, 0, 0.65); min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 40px; }
+        .container { max-width: 900px; text-align: center; color: white; }
+        .title { font-size: 48px; font-weight: 700; color: #8eff7a; }
+        .tagline { font-size: 18px; margin-bottom: 20px; color: #dcdcdc; font-style: italic; }
+        .intro { font-size: 16px; line-height: 1.7; margin-bottom: 30px; color: #f1f1f1; }
+        .card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px; margin: 20px 0; text-align: left; border-left: 5px solid #8eff7a; transition: 0.3s ease; }
+        .card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.15); }
+        .card h2 { color: #8eff7a; margin-bottom: 10px; }
+        ul { margin-left: 20px; color: #f1f1f1; line-height: 1.7; }
+        li { margin-bottom: 8px; }
+        .nav-links { margin-top: 20px; }
+        .nav-links a { color: #8eff7a; text-decoration: none; margin: 0 10px; font-weight: 600; border: 1px solid #8eff7a; padding: 5px 15px; border-radius: 5px; }
+        .nav-links a:hover { background: #8eff7a; color: black; }
+    </style>
 </head>
 <body>
-    <h1>Garlic Kangkong Recipe</h1>
-    <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/4MZEAxCbzgk" allowfullscreen></iframe>
+<div class="overlay">
+    <div class="container">
+        <h1 class="title">GULAYarn</h1>
+        <p class="tagline">Grow Local, Eat Healthy.</p>
+        
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="ABOUT.html">ABOUT</a>
+            <a href="PLANTS.html">PLANTS</a>
+            <a href="GARDENING.html">GARDENING</a>
+            <a href="RECIPE.html">RECIPE</a>
+            <a href="CONTACT.html">CONTACT</a>
+        </div>
+
+        <p class="intro" style="margin-top:30px;">
+            GULAYarn is a platform dedicated to helping Filipinos rediscover the value of backyard gardening and local vegetables...
+        </p>
+        <div class="card">
+            <h2>🌿 What You Can Explore</h2>
+            <ul>
+                <li>🌿 Edible backyard plants in the Philippines</li>
+                <li>🥗 Health benefits and nutritional value</li>
+                <li>🍲 Cook affordable and easy home recipes</li>
+                <li>🌱 Grow your own food</li>
+            </ul>
+        </div>
     </div>
+</div>
 </body>
 </html>
