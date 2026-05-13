@@ -7,6 +7,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
         * {
             margin: 0;
@@ -16,7 +18,7 @@
         }
 
         body {
-            background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") no-repeat center center/cover;
+            background: url("https://i.pinimg.com/736x/9c/aa/1e/9caa1e991834da5f2f6a3659319497a1.jpg") no-repeat center center/cover;
             min-height: 100vh;
         }
 
@@ -39,7 +41,7 @@
         .title {
             font-size: 48px;
             font-weight: 700;
-            color: #8eff7a;
+            color: #092C0E;
         }
 
         .tagline {
@@ -64,7 +66,7 @@
             padding: 25px;
             margin: 20px 0;
             text-align: left;
-            border-left: 5px solid #8eff7a;
+            border-left: 5px solid #092C0E;
             transition: 0.3s ease;
         }
 
@@ -74,7 +76,7 @@
         }
 
         .card h2 {
-            color: #8eff7a;
+            color: #092C0E;
             margin-bottom: 10px;
         }
 
@@ -107,6 +109,15 @@
 </head>
 
 <body>
+    
+    <div class="nav-container">
+    <a href="index.html" class="nav-links">HOME</a>
+    <a href="ABOUT.html" class="nav-links">ABOUT</a>
+    <a href="PLANTS.html" class="nav-links">PLANTS</a>
+    <a href="GARDENING.html" class="nav-links">GARDENING</a>
+    <a href="RECIPE.html" class="nav-links">RECIPE</a>
+    <a href="CONTACT.html" class="nav-links">CONTACT</a>
+</div>
 
 <div class="overlay">
 
@@ -131,19 +142,49 @@
                 <li>🌿 Discover edible backyard plants commonly found in the Philippines</li>
                 <li>🥗 Learn their health benefits and nutritional value</li>
                 <li>🍲 Cook affordable and easy home recipes</li>
-                <li>🌱 Grow your own food with simple gardening techniques</li>
+                <li>🌱 Grow your own vegetables with simple gardening techniques</li>
             </ul>
         </div>
 
-        <!-- Featured Plant -->
+           <!-- Fun Fact -->
         <div class="card">
-            <h2>🌱 Featured Plant: Malunggay (Moringa)</h2>
+            <h2>🌱 Fun Fact</h2>
             <p>
-                Known as a “miracle tree,” malunggay is packed with essential nutrients such as vitamins A, C, and E, calcium, and antioxidants. 
-                It helps strengthen the immune system, improve digestion, and support overall wellness. It is also easy to grow, making it 
-                perfect for home gardens.
+                Many common backyard plants in the Philippines—such as Malunggay, Kangkong, and Saluyot—are considered “survival vegetables” because they grow easily even in poor soil and can be harvested repeatedly, making them a reliable source of food and nutrition for Filipino families.
             </p>
         </div>
+
+       <style>
+    .featured-img {
+        display: block;       /* Allows centering with margin */
+        margin: 20px auto;    /* Centers the image and adds space above/below */
+        width: 80%;           /* Makes it wider than the standard cards */
+        max-width: 400px;     /* Prevents it from becoming too huge on desktop */
+        height: 250px;        /* Slightly bigger height for focus */
+        object-fit: cover;    /* Keeps the Malunggay looking natural, not stretched */
+        border-radius: 15px;
+        border: 3px solid #a8ff60; /* Slightly thicker border for the featured item */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    
+    .card-featured {
+        text-align: center;   /* Centers the text to match the centered image */
+    }
+</style>
+
+<div class="card card-featured">
+    <h2>🌱 Featured Plant: Malunggay (Moringa)</h2>
+    
+    <img src="https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/11/2018/02/144707635_138980998068351_1595310295312746609_n-1.jpg" 
+         alt="Malunggay Leaves" 
+         class="featured-img">
+
+    <p>
+        Known as a “miracle tree,” malunggay is packed with essential nutrients such as vitamins A, C, and E, calcium, and antioxidants. 
+        It helps strengthen the immune system, improve digestion, and support overall wellness. It is also easy to grow, making it 
+        perfect for home gardens.
+    </p>
+</div>
 
         <p class="closing">
             Start small, grow your own food, and take a step toward a healthier lifestyle today.
